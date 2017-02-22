@@ -375,7 +375,7 @@ nav {
     background: url(../images/css.png) center no-repeat ;
 }
 #skill_icon4{
-    background: url(../images/JS.png) center  no-repeat ;
+    background: url(../images/js.png) center  no-repeat ;
 }
 .skill_name {
 	text-align: center;
@@ -954,3 +954,4 @@ footer div a:hover {
 	animation: b_to_t 1s;
 	visibility: visible;
 }
+/*css*/

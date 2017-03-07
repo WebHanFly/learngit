@@ -92,29 +92,11 @@ nav li a:hover:after {
 	right: 0px;
 	opacity: 0.7;
 }
-@media screen and (max-width:1366px){
-#header {
-	height: 60px;
-}
-#logo {
-	margin: 0 30px;
-}
-nav {
-	margin-top: 18px;
-}
-}
-@media screen and (max-width:640px){
-#header {
-	height: 60px;
-}
-#logo {
-	margin: 0 30px;
-}
-nav {
-	margin-top: 18px;
-}
-#home_content {margin-top: 30%}
-}
+
+
+
+
+
 .section {text-align: center;overflow: hidden;position: relative;}
 .section1 {background: url(../images/bg1.jpg) no-repeat center;background-size:270% 150%;}
 .section2,.section3,.section4,.section5,.section6{background: url(../images/bg1.jpg) center no-repeat;background-size: cover;}
@@ -129,7 +111,7 @@ nav {
 	-webkit-transition: box-shadow .5s;
 	transition: box-shadow .5s;position: absolute;}
 #home_head_content img:hover {cursor: pointer;}
-#home_info {}
+
 #home_photo1 {position: absolute;left: 0;z-index: 1}
 
 #home_photo2 {position: absolute;left:0;z-index: 0}
@@ -201,10 +183,6 @@ nav {
 	line-height: 40px;
 	position: relative;
 	}
-
-#about_list_content{
-
-}
 #about_info p:nth-child(1), #about_info p:nth-child(2) ,#about_info p:nth-child(3) ,#about_info p:nth-child(4) {padding-top: 500px;}
 
 .about_list_eg {
@@ -375,7 +353,7 @@ nav {
     background: url(../images/css.png) center no-repeat ;
 }
 #skill_icon4{
-    background: url(../images/js1.png) center  no-repeat ;
+    background: url(../images/js.png) center  no-repeat ;
 }
 .skill_name {
 	text-align: center;
@@ -462,6 +440,7 @@ nav {
 	animation: skill_scale 1s;
 	visibility: visible;
 }
+.flag {display: none;}
 
 /*page4*/
 .section4 {}
@@ -955,3 +934,84 @@ footer div a:hover {
 	visibility: visible;
 }
 /*css*/
+
+
+/*响应式布局*/
+@media screen and (max-width:1366px){
+#header {
+	height: 60px;
+}
+#logo {
+	margin: 0 30px;
+}
+nav {
+	margin-top: 18px;
+}
+}
+
+@media screen and (max-width:640px){
+#header {
+	height: 80px;
+}
+#header_p {margin-left: 46%}
+#header_p1 {padding-top: 0;}
+#logo {
+	margin: 10px 20px;width: 100%;
+}
+nav {
+	/*margin-top: 18px;*/
+	display: none;
+}
+#home_content {margin-top: 30%}
+#home_info2 {border-top: 1px solid rgb(0, 128, 255);width: 80%;margin: 0 auto}
+#home_info {width: 100%;}
+#home_info_box {width: 100% !important;font-size: 20px !important;}
+#home_info_box {border:none !important;}
+/*page2*/
+.title h1 {font-size: 24px !important;}
+#about_list_content {margin: 0 auto;}
+#about_info {width: 100% !important;margin-top: 20px !important;height: 38%;}
+#about_list_content {width: 100%;height: 50%;}
+.about_list {margin-left: 80px;padding-top: 8px;}
+#about_list1 {margin-left: 80px;}
+#about_info p {line-height: 38px;}
+.about_list_cn {height: 20px;}
+.about_list_cn  p {margin: -20px;padding: 0;}
+.about_list_cn p:before {content: '';transform: rotate(-90deg);width: 22px;left: 39px;bottom: 10px;}
+
+/*page3*/
+#skill_content {padding-top: 80px;}
+#skill_list {width: 200%;display: inline-block;}
+#skill_list1, #skill_list2, #skill_list3, #skill_list4 {
+    width: 25%;
+}
+#about_list_content {border-radius: 10px;}
+.flag {display: block;background: url(../images/jt.png) no-repeat center center;position: absolute;top: 75%;width: 80px;height: 80px;background-size: 80%;}
+#flag1 {transform: rotateZ(0deg);left: 15%}
+#flag2 {transform: rotateZ(180deg); right:  15%}
+.skill_int {left: 0;padding: 15px;}
+.skill_int li {font-size: 16px;}
+#skill_list {position: relative;}
+#skill_int1,#skill_int3 {left: 14%;}
+#skill_int2,#skill_int4 {left: -85%;}
+/*page4*/
+#exp_list_slider {width: auto;}
+.exp_list dl {margin-left: 20px;}
+#exp_list_toleft, #exp_list_toright {position: absolute;top: 80%;}
+.exp_list {background: none;}
+#exp_info {width: auto;}
+#exp_content {padding-top: 80px}
+#exp_timeline {width: auto !important;}
+#exp_info {font-size: 18px;}
+/*page5*/
+#demo_content {padding-top: 80px;}
+#demo_content_list {width: auto;}
+.demo_box li,.demo_box_bg  {width: 135px;height: 100px;}
+.demo_box li:before {content: '';}
+.demo_box li {outline: 9px solid #fff;}
+#demo_info,#demo_info p {width: auto;font-size: 16px;}
+/*page6*/
+#contact_head,#contact_info {width: auto;}
+#contact {padding-top: 80px;}
+
+}

@@ -41,13 +41,44 @@ $(document).ready(function() {
 				});	
 					break;
         		case 3:
-        		
+        		        var pa = 1;
 						$("#skill_content h1").after("<div class='title_en'><h2>· skill ·</h2></div>");
 						$(".title_en").animate({width:"130px"},800,function(){
 							$(".title_en h2").slideDown(400);
 								});
 						$(".skill_list_content").stop().addClass("skill_scale");
+                       
+                       
+                       	     $("#flag1").click(function(){
+                       	     if(pa<2){
+                        	$("#skill_list").animate({left:"-=100%"},500);
+                        	pa++;
+                        	console.log(pa);
+                        	}else{
+                                	$("#skill_list").animate({left:"-=30"},200,function(){
+									$(this).animate({left:"+=30"},200);
+								});
+								return;
+							} 
+                        });
+                       
+                      
+                       	
+                            $("#flag2").click(function(){
+                            	 if(pa>1){
+                        	$("#skill_list").animate({left:"+=100%"},500);
+                                pa--;
+                                }else{
+                                	$("#skill_list").animate({left:"+=30"},200,function(){
+									$(this).animate({left:"-=30"},200);
+								});
+								return;
+							}
 
+                        });
+
+                       
+                         
         		  break;
         		case 4:
                    
@@ -163,18 +194,21 @@ $(document).ready(function() {
 		});
 //page3
 		$(".skill_icon").click(function(){
+			$(".flag").css("display","none");
 			$(".skill_int").each(function(){
 				if($(this).is(":visible")){
 					$(this).slideUp(200);
 					$(this).prev().removeClass("skill_flag_scale");
+
 				};
 			});
 			if($(this).siblings(".skill_int").is(":hidden")){
+
 					$(this).siblings(".skill_int").slideDown(400);
 					$(this).siblings(".skill_flag").addClass("skill_flag_scale");
 				}
-			else{
-							$(this).siblings(".skill_int").slideUp(200);
+			else{           
+							$(this).siblings(".skill_int").slideUp(200,function(){$(".flag").css("display","block");});
 							$(this).siblings(".skill_flag").removeClass("skill_flag_scale");
 				};
 
